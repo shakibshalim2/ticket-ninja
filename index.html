@@ -78,7 +78,6 @@
                         <p id="total-price">$0</p>
                     </div>
                 </div>
-
                 <div class="amount">
                     <div class="left">
                         <p>Charge 10% VAT</p>
@@ -98,11 +97,7 @@
                 </div>
             </div>
             <button onclick="validation()" class="btn-style">Book Now</button>
-            <div>
-             <p id="ticket-buying"></p>
-            </div>
         </div>
-
         <div class="booking-content">
             <h1>discover <br> around the world</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
@@ -127,17 +122,12 @@ let totalTicket = 0;
 if(ticket == 'first-class'){
 totalTicket = ticketNewCount * 150;
 
-
 }
 if(ticket == 'economy'){
-totalTicket = ticketNewCount * 100
-
+totalTicket = ticketNewCount * 100;
 
 }
-calculateTotal()
-document.getElementById(ticket + '-price').innerText = '$' + totalValue;
-
-
+calculateTotal();
 }
 function calculateTotal(){
 const firstClassCount = getInputValue('firstClass')
@@ -159,20 +149,14 @@ return ticketCount;
 
 }
 function validation(){
-   
     const firstClassCount = document.getElementById('firstClass-count').value;
 const economyCount = document.getElementById('economy-count').value;
 if(0 < firstClassCount || 0 < economyCount){
     confirm("Ticket Buy Successful"); 
 }
 else{
-alert("Please input Value")
-
-
+alert("Please input Value");
 }
-
-
-
 }
 </script>
 
