@@ -75,7 +75,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p id="total-price">$500</p>
+                        <p id="total-price">$0</p>
                     </div>
                 </div>
 
@@ -84,7 +84,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p id="tax">$50</p>
+                        <p id="tax">$0</p>
                     </div>
                 </div>
                 <hr>
@@ -93,11 +93,11 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p id="grand-total">$550</p>
+                        <p id="grand-total">$0</p>
                     </div>
                 </div>
             </div>
-            <button id="ticket-book" class="btn-style">Book Now</button>
+            <button onclick="validation()" class="btn-style">Book Now</button>
             <div>
              <p id="ticket-buying"></p>
             </div>
@@ -158,7 +158,22 @@ const ticketCount = parseInt(ticketInput.value);
 return ticketCount;
 
 }
+function validation(){
+   
+    const firstClassCount = document.getElementById('firstClass-count').value;
+const economyCount = document.getElementById('economy-count').value;
+if(0 < firstClassCount || 0 < economyCount){
+    confirm("Ticket Buy Successful"); 
+}
+else{
+alert("Please input Value")
 
+
+}
+
+
+
+}
 </script>
 
 </body>
